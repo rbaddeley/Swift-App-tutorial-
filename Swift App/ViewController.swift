@@ -10,21 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var theLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var ncFio2: UITextField!
     
-    @IBAction func buttonTap(_ sender: Any) {
-        tapCount = tapCount + 1
-        if tapCount >= 10 {
-            theLabel.text = "You've tapped more than 10 times!"
-        }
+    @IBAction func ncFio2Go(_ sender: Any) {
+        print(ncFio2.text!)
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        ncFio2.placeholder = "Enter LPM"
     }
 
     override func didReceiveMemoryWarning() {
